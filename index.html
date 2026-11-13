@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>VESPER – Wear Your Identity</title>
+<meta name="description" content="VESPER premium streetwear & lifestyle: tees, hoodies, shorts, caps, mugs and luxe bedding. Order on WhatsApp.">
+<meta name="theme-color" content="#050912">
+<link rel="canonical" href="https://vesper-beta-steel.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VESPER">
+<meta property="og:title" content="VESPER – Wear Your Identity">
+<meta property="og:description" content="Premium streetwear & lifestyle: tees, hoodies, shorts, caps, mugs and luxe bedding. Order directly on WhatsApp.">
+<meta property="og:url" content="https://vesper-beta-steel.vercel.app/">
+<meta property="og:image" content="https://vesper-beta-steel.vercel.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VESPER – Wear Your Identity">
+<meta name="twitter:description" content="Premium streetwear & lifestyle. Order directly on WhatsApp.">
+<meta name="twitter:image" content="https://vesper-beta-steel.vercel.app/og-image.jpg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#04070f;--navy:#0b1630;--navy2:#13244a;--line:rgba(255,255,255,.1);--txt:#f2f5fb;--mut:#9aa6c0;--acc:#6f9cff;--wa:#25d366}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(1200px 600px at 80% -10%,#0f2250 0,transparent 60%),var(--bg);color:var(--txt);font:400 16px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,92%);margin:auto}
+header{position:fixed;inset:0 0 auto;z-index:50;padding:env(safe-area-inset-top) 0 0;background:rgba(4,7,15,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{display:flex;align-items:center;gap:10px;font:700 18px Orbitron,sans-serif;letter-spacing:.3em}
+.brand img{width:34px;height:34px;border-radius:8px}
+nav{display:flex;gap:22px;font-size:14px;color:var(--mut)}
+nav a:hover{color:#fff}
+@media(max-width:640px){nav{display:none}}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:110px 0 70px;position:relative}
+.hero img.lg{width:min(260px,56vw);margin:0 auto 26px;border-radius:50%;box-shadow:0 0 80px rgba(111,156,255,.25);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.hero h1{font:700 clamp(26px,6vw,52px)/1.15 Orbitron,sans-serif;letter-spacing:.08em}
+.hero h1 span{background:linear-gradient(90deg,#fff,var(--acc));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:620px;margin:18px auto 28px;color:var(--mut)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 26px;border-radius:50px;border:0;font:600 15px Inter;cursor:pointer;transition:.3s;color:#fff}
+.btn.pri{background:linear-gradient(135deg,var(--navy2),#2a4ca0);box-shadow:0 8px 28px rgba(42,76,160,.4)}
+.btn.pri:hover{transform:translateY(-2px)}
+.btn.wa{background:var(--wa);color:#05260f}
+.btn.ghost{background:transparent;border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--acc)}
+.rv{opacity:0;transform:translateY(28px);transition:.8s}
+.rv.in{opacity:1;transform:none}
+section{padding:80px 0}
+h2{font:700 clamp(22px,4vw,34px) Orbitron,sans-serif;letter-spacing:.1em;text-align:center;margin-bottom:10px}
+.sub{text-align:center;color:var(--mut);max-width:600px;margin:0 auto 44px}
+.about{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:34px}
+.card{background:linear-gradient(160deg,var(--navy),rgba(11,22,48,.4));border:1px solid var(--line);border-radius:20px;padding:24px;transition:.4s}
+.card:hover{transform:translateY(-5px);border-color:rgba(111,156,255,.5)}
+.card b{display:block;font-family:Orbitron;letter-spacing:.08em;font-size:14px;margin-bottom:6px}
+.card p{color:var(--mut);font-size:14px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr);gap:24px}}
+.pc{background:var(--navy);border:1px solid var(--line);border-radius:20px;overflow:hidden;cursor:pointer;transition:.4s}
+.pc:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(0,0,0,.5);border-color:rgba(111,156,255,.5)}
+.pc .im{aspect-ratio:4/5;overflow:hidden;background:#0a0f1d}
+.pc img{width:100%;height:100%;object-fit:cover;transition:.7s}
+.pc:hover img{transform:scale(1.07)}
+.pc .in2{padding:14px 16px 18px}
+.pc h3{font-size:14px;font-weight:600;line-height:1.35}
+.pc small{color:var(--acc);font-size:12px;letter-spacing:.05em}
+.pc .more{margin-top:8px;font-size:13px;color:var(--mut)}
+.how{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));counter-reset:s}
+.how .card{counter-increment:s}
+.how .card:before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--navy2);font:700 14px Orbitron;margin-bottom:12px}
+.soc{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.soc a{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;transition:.3s;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.soc a:hover{transform:translateY(-5px) scale(1.07)}
+.soc svg{width:30px;height:30px;fill:#fff}
+footer{padding:36px 0 110px;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+.fab{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:60;width:62px;height:62px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.45);animation:pulse 2.4s infinite}
+.fab svg{width:34px;height:34px;fill:#fff}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 18px transparent}100%{box-shadow:0 0 0 0 transparent}}
+/* modal */
+.ov{position:fixed;inset:0;z-index:100;background:rgba(2,4,10,.85);backdrop-filter:blur(8px);display:none;align-items:flex-end;justify-content:center;opacity:0;transition:.3s}
+.ov.show{display:flex;opacity:1}
+@media(min-width:800px){.ov{align-items:center}}
+.md{background:linear-gradient(180deg,#0d1a38,#070d1d);border:1px solid var(--line);width:min(960px,100%);max-height:94svh;overflow:auto;border-radius:26px 26px 0 0;position:relative;animation:up .45s cubic-bezier(.2,.8,.2,1)}
+@media(min-width:800px){.md{border-radius:26px;display:grid;grid-template-columns:1fr 1fr}}
+@keyframes up{from{transform:translateY(60px);opacity:0}}
+.x{position:absolute;top:12px;right:12px;z-index:5;width:40px;height:40px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:20px;cursor:pointer}
+.sl{position:relative;background:#080d1a}
+.tr{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.tr::-webkit-scrollbar{display:none}
+.tr img{flex:0 0 100%;scroll-snap-align:center;aspect-ratio:1/1;object-fit:contain;background:#0a0f1d}
+.ar{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:18px;cursor:pointer}
+.ar.l{left:10px}.ar.r{right:10px}
+.dots{display:flex;gap:6px;justify-content:center;padding:10px;flex-wrap:wrap}
+.dots i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.25);transition:.3s;cursor:pointer}
+.dots i.on{background:var(--acc);width:22px;border-radius:8px}
+.inf{padding:26px 24px 28px}
+.inf h3{font:700 20px/1.3 Orbitron;letter-spacing:.04em;margin-bottom:6px}
+.tag{color:var(--acc);font-size:14px;margin-bottom:12px}
+.inf p.d{color:var(--mut);font-size:14.5px;margin-bottom:14px}
+.inf h4{font-size:12px;letter-spacing:.15em;text-transform:uppercase;margin:14px 0 6px}
+.inf ul{list-style:none;font-size:14px;color:#cdd6ea}
+.inf li{padding:3px 0 3px 20px;position:relative}
+.inf li:before{content:"◆";position:absolute;left:0;color:var(--acc);font-size:9px;top:8px}
+.sz{display:flex;flex-wrap:wrap;gap:8px}
+.sz button{min-width:46px;padding:8px 14px;border-radius:12px;border:1px solid var(--line);background:transparent;color:#fff;cursor:pointer;font:500 14px Inter;transition:.2s}
+.sz button.on{background:var(--acc);color:#04102a;border-color:var(--acc)}
+.act{display:grid;gap:10px;margin-top:20px}
+.pay{padding:30px 24px;width:min(460px,100%);margin:auto}
+.pay h3{font:700 20px Orbitron;margin-bottom:6px}
+.bk{margin:18px 0;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.bk div{display:flex;justify-content:space-between;gap:10px;padding:12px 16px;font-size:14px;border-bottom:1px solid var(--line)}
+.bk div:last-child{border:0}
+.bk span{color:var(--mut)}
+.bk b{text-align:right}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="#top" class="brand"><img src="img/logo.jpg" alt="">VESPER</a>
+<nav><a href="#about">About</a><a href="#shop">Shop</a><a href="#how">How to order</a><a href="#contact">Contact</a></nav>
+<a class="btn wa" style="padding:8px 16px;font-size:13px" href="#" data-wa="Hi VESPER! I'd like to know more about your products.">WhatsApp</a></div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+<img class="lg" src="img/logo.jpg" alt="VESPER logo">
+<h1><span>WEAR YOUR IDENTITY</span></h1>
+<p>Premium streetwear and lifestyle essentials from Sri Lanka: minimal design, quality fabric, elegant finishing. Made for those who live with vision and style.</p>
+<a href="#shop" class="btn pri">Shop the Collection</a>
+</div></section>
+
+<section id="about"><div class="wrap rv">
+<h2>VISION. EXCELLENCE. STYLE.</h2>
+<p class="sub">VESPER is a modern lifestyle brand built on simplicity and quality. From everyday tees, oversized hoodies and essential shorts to signature caps, glossy black mugs and luxe bedding, every piece carries a clean minimal look and refined detail. We sell directly online and deliver to your door, so ordering is just a message away.</p>
+<div class="about">
+<div class="card"><b>PREMIUM QUALITY</b><p>Carefully selected fabrics and durable, clean stitching on every piece.</p></div>
+<div class="card"><b>MINIMAL DESIGN</b><p>Subtle signature VESPER branding. Timeless, elegant and easy to style.</p></div>
+<div class="card"><b>EASY ORDERING</b><p>Pick your product and size, then order straight through WhatsApp.</p></div>
+<div class="card"><b>PERSONAL SERVICE</b><p>Chat with us directly for sizes, availability, prices and delivery.</p></div>
+</div></div></section>
+
+<section id="shop"><div class="wrap">
+<h2 class="rv">THE COLLECTION</h2><p class="sub rv">Tap any product to see all photos, details and sizes.</p>
+<div class="grid" id="grid"></div></div></section>
+
+<section id="how"><div class="wrap rv">
+<h2>HOW TO ORDER</h2><p class="sub">Simple, fast and personal.</p>
+<div class="how">
+<div class="card"><b>CHOOSE</b><p>Open a product and pick your size.</p></div>
+<div class="card"><b>PURCHASE</b><p>Tap Purchase and we get your order on WhatsApp instantly.</p></div>
+<div class="card"><b>PAY</b><p>Tap Buy Now to view our bank details and transfer.</p></div>
+<div class="card"><b>RECEIVE</b><p>Send your payment slip and we'll arrange delivery.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap rv" style="text-align:center">
+<h2>STAY CONNECTED</h2><p class="sub">Follow VESPER for new drops, behind the scenes and offers.</p>
+<div class="soc">
+<a style="background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)" href="https://www.instagram.com/vesper_wearzz" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2A3.2 3.2 0 1112 8.8a3.2 3.2 0 010 6.4zM17.3 5.5a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM12 2.2c-3.2 0-3.6 0-4.8.1C4 2.4 2.4 4 2.3 7.2 2.2 8.4 2.2 8.8 2.2 12s0 3.6.1 4.8c.1 3.2 1.7 4.8 4.9 4.9 1.2.1 1.6.1 4.8.1s3.6 0 4.8-.1c3.2-.1 4.8-1.7 4.9-4.9.1-1.2.1-1.6.1-4.8s0-3.6-.1-4.8C21.600 4 20 2.400 16.800 2.300 15.600 2.200 15.200 2.200 12 2.200zm0 1.800c3.100 0 3.500 0 4.700.1 2.300.1 3.100 1 3.200 3.200.1 1.200.1 1.600.1 4.700s0 3.500-.1 4.700c-.1 2.200-.9 3.100-3.200 3.200-1.200.1-1.600.1-4.700.1s-3.500 0-4.700-.1c-2.300-.1-3.100-1-3.200-3.200C4 15.500 4 15.100 4 12s0-3.500.1-4.700C4.200 5 5 4.200 7.300 4.100 8.500 4 8.900 4 12 4z"/></svg></a>
+<a style="background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.4),-3px -3px 0 #25f4ee,3px 3px 0 #fe2c55" href="https://www.tiktok.com/@vesper_wearzz" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" style="fill:#000"><path d="M16.600 2h-3.200v13.200a2.900 2.900 0 11-2.900-2.900c.3 0 .6 0 .9.100V9.100a6.200 6.200 0 106.100 6.200V8.700a7.600 7.600 0 004.400 1.400V6.900A4.500 4.500 0 0116.600 2z"/></svg></a>
+<a style="background:#1877f2" href="https://www.facebook.com/share/1E8fCrd7x8/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.500 22v-8.200h2.800l.4-3.300h-3.200V8.400c0-.9.300-1.600 1.600-1.600h1.700V3.900c-.3 0-1.300-.1-2.500-.1-2.500 0-4.200 1.500-4.200 4.300v2.400H7.300v3.300h2.800V22z"/></svg></a>
+<a style="background:var(--wa)" href="https://whatsapp.com/channel/0029Vb9JtYM0wak2I57vlr2s" target="_blank" rel="noopener" aria-label="WhatsApp Channel"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.600 15.100L2 22l5-1.300A10 10 0 1012 2zm0 18.200c-1.500 0-3-.4-4.200-1.200l-.3-.2-3 .8.8-2.900-.2-.3A8.200 8.200 0 1112 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.100l-.8 1c-.1.200-.3.200-.5.100-1.500-.7-2.400-1.300-3.400-2.900-.3-.4.300-.4.800-1.400.1-.2 0-.3 0-.5l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.100-.7.300-.7.700-1 1.500-1 2.300.1 1 .5 1.900 1.100 2.700 1.300 1.700 3 3 5.100 3.600.7.200 1.200.2 1.700.1.500-.1 1.600-.7 1.800-1.300.2-.6.200-1.200.2-1.300-.1-.2-.2-.2-.5-.4z"/></svg></a>
+</div>
+<p style="margin-top:26px;color:var(--mut)">WhatsApp Business: <a href="#" data-wa="Hi VESPER!" style="color:var(--wa);font-weight:600">078 838 4998</a></p>
+</div></section>
+</main>
+
+<footer><div class="wrap">© <span id="yr"></span> VESPER. Wear Your Identity.<br>Website designed &amp; developed by <b style="color:#fff">MAYON</b> · © <span id="yr2"></span> MAYON. All rights reserved.<br><a href="https://www.mayonb.site" target="_blank" rel="noopener" style="color:var(--acc);font-weight:600">www.mayonb.site</a></div></footer>
+
+<a class="fab" href="#" data-wa="Hi VESPER! I'd like to know more about your products." aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.600 15.100L2 22l5-1.300A10 10 0 1012 2zm0 18.200c-1.500 0-3-.4-4.200-1.200l-.3-.2-3 .8.8-2.900-.2-.3A8.200 8.200 0 1112 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.100l-.8 1c-.1.200-.3.200-.5.100-1.500-.7-2.400-1.300-3.400-2.900-.3-.4.300-.4.800-1.400.1-.2 0-.3 0-.5l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.100-.7.300-.7.700-1 1.500-1 2.300.1 1 .5 1.900 1.100 2.700 1.300 1.700 3 3 5.100 3.600.7.200 1.200.2 1.700.1.500-.1 1.600-.7 1.800-1.300.2-.6.200-1.200.2-1.300-.1-.2-.2-.2-.5-.4z"/></svg></a>
+
+<div class="ov" id="ov"><div class="md" id="md"></div></div>
+
+<script>
+const WA="94788384998";
+const BANK={Bank:"Commercial Bank",Branch:"Kollupitiya","Account Name":"Master Stephan Adriel Rathnayake","Account No.":"8031034476"};
+const P=[
+{id:"tee",n:"Premium Contrast T-Shirt",tag:"Refined Design. Premium Quality. Everyday Style.",im:8,sizes:[],
+d:"Upgrade your wardrobe with the VESPER Premium Contrast T-Shirt, combining modern minimalism with quality craftsmanship. A clean finish, contrasting neckline and sleeve trims and our signature embroidered logo give a timeless, sophisticated look.",
+f:["Premium Scooba fabric for a comfortable, stylish feel","Embroidered VESPER logo with a refined premium finish","Zigzag standard stitching for a clean, distinctive look"],
+det:["Brand: VESPER","Colours: White with Black contrast / Black with White contrast","Material: Scooba","Logo: Embroidered","Stitching: Zigzag standard"],
+line:"Quality in Every Detail. Style in Every Thread.",opt:["White","Black"]},
+{id:"hoodie",n:"Premium Oversized Hoodie",tag:"Wear Your Vision. Define Your Style.",im:4,sizes:["S","M","L","XL","XXL"],
+d:"Modern streetwear for those who appreciate simplicity, comfort and luxury. A subtle VESPER logo on the front chest, a completely plain back and a relaxed oversized silhouette.",
+f:["Premium-quality fabric","Modern oversized fit","Minimal VESPER chest logo","Clean plain back design","Adjustable hood with drawstrings","Spacious kangaroo pocket","Ribbed cuffs and waistband","Durable stitching and premium finishing"],
+det:["Brand: VESPER","Colour: Black","Style: Premium oversized streetwear","Back: Plain","Fit: Oversized"],line:"Vision. Excellence. Style. Passion. Elegance. Royalty."},
+{id:"crop",n:"Premium Halter Crop Top",tag:"Wear Your Vision. Define Your Style.",im:3,sizes:["S","M","L","XL"],
+d:"A modern sporty aesthetic with minimalist luxury detailing. Elegant black finish, contrasting white neckline and strap detailing and the signature VESPER logo on the front. Perfect for casual outfits and stylish streetwear looks.",
+f:["Premium-quality fabric","Stylish halter-neck design","Elegant black and white colour combination","Signature VESPER front logo","White contrast piping","Comfortable, lightweight feel","Modern cropped fit","Premium finishing and stitching"],
+det:["Brand: VESPER","Colour: Black & White","Fit: Fitted","Design: Minimal front logo"],line:"Vision. Excellence. Style. Passion. Elegance. Royalty."},
+{id:"shorts",n:"Essential Shorts – Black",tag:"WEAR YOUR IDENTITY.",im:4,sizes:["S","M","L","XL"],
+d:"Designed for comfort, simplicity and a modern streetwear look. A clean silhouette with premium minimalist branding, perfect for everyday wear and casual styling.",
+f:["Classic black colour","Comfortable elastic waistband","Adjustable drawstring with metal tips","Functional side pockets","Signature VESPER logo","Minimalist streetwear design"],
+det:["Brand: VESPER","Colour: Black","Style: Essential streetwear","Fit: Relaxed"],line:"WEAR YOUR IDENTITY."},
+{id:"cap",n:"Premium Signature Cap – Black",tag:"Minimal Design. Maximum Style.",im:4,sizes:[],
+d:"A sleek matte-black finish, elegant white VESPER embroidery and distinctive white brim detailing. Crafted for comfort, durability and effortless style, the perfect everyday accessory.",
+f:["Premium black cotton twill fabric","Elegant white VESPER front embroidery","Signature white piping along the curved brim","Structured six-panel design","Breathable inner sweatband","Adjustable premium metal buckle","Durable stitching and refined finishing","Unisex design"],
+det:["Brand: VESPER","Colour: Black / White","Style: Premium baseball cap","Fit: Adjustable","Closure: Metal buckle"],line:"Wear Your Identity."},
+{id:"mug",n:"Premium Ceramic Mug",tag:"Style in Every Detail.",im:2,sizes:[],
+d:"Elevate your everyday moments with a sleek glossy black finish and our signature VESPER logo in elegant silver-white lettering. A touch of luxury for your daily routine.",
+f:["Premium glossy black finish","Signature VESPER logo","Elegant minimalist design","Stylish, comfortable handle","Perfect for home, office or gifting"],
+det:["Brand: VESPER","Capacity: 320 ml (11 oz)","Colour: Classic black"],line:"Style in Every Detail."},
+{id:"bed",n:"VESPER LUXE – Premium Bedding",tag:"Modern luxury for your bedroom.",im:4,sizes:["Single","Queen","King"],
+d:"Experience everyday comfort with the VESPER Luxury Bedding Collection. A sophisticated black design with elegant white stripe detailing and subtle VESPER branding brings modern luxury to your bedroom.",
+f:["Premium-quality fabric","Elegant matte black colour","Small VESPER branding on the bedsheet only","Plain black pillowcases without logos","Minimal white stripe detailing","Soft and comfortable finish","Easy-care material"],
+det:["Single – 36 × 75 inches","Queen – 60 × 78 inches","King – 72 × 78 inches","Set includes: 1 bedsheet / duvet cover + 2 plain black pillowcases"],line:""}
+];
+const $=s=>document.querySelector(s),ov=$("#ov"),md=$("#md");
+const imgs=p=>Array.from({length:p.im},(_,i)=>`img/${p.id}${i+1}.jpg`);
+$("#yr").textContent=$("#yr2").textContent=new Date().getFullYear();
+$("#grid").innerHTML=P.map((p,i)=>`<article class="pc rv" data-i="${i}"><div class="im"><img loading="lazy" src="${imgs(p)[0]}" alt="VESPER ${p.n}"></div><div class="in2"><small>VESPER</small><h3>${p.n}</h3><div class="more">View details →</div></div></article>`).join("");
+const wa=t=>"https://wa.me/"+WA+"?text="+encodeURIComponent(t);
+document.querySelectorAll("[data-wa]").forEach(a=>{a.href=wa(a.dataset.wa);a.target="_blank";a.rel="noopener"});
+let cur,size,opt;
+function open(i){
+ cur=P[i];size=null;opt=null;const im=imgs(cur);
+ md.innerHTML=`<button class="x" aria-label="Close">✕</button>
+ <div class="sl"><div class="tr" id="tr">${im.map(s=>`<img src="${s}" alt="${cur.n}">`).join("")}</div>
+ <button class="ar l" aria-label="Previous">‹</button><button class="ar r" aria-label="Next">›</button><div class="dots" id="dots">${im.map((_,k)=>`<i class="${k?"":"on"}"></i>`).join("")}</div></div>
+ <div class="inf"><h3>VESPER – ${cur.n}</h3><div class="tag">${cur.tag}</div><p class="d">${cur.d}</p>
+ ${cur.opt?`<h4>Colour</h4><div class="sz" id="opt">${cur.opt.map(o=>`<button>${o}</button>`).join("")}</div>`:""}
+ ${cur.sizes.length?`<h4>Select size</h4><div class="sz" id="sz">${cur.sizes.map(s=>`<button>${s}</button>`).join("")}</div>`:""}
+ <h4>Key features</h4><ul>${cur.f.map(x=>`<li>${x}</li>`).join("")}</ul>
+ <h4>Product details</h4><ul>${cur.det.map(x=>`<li>${x}</li>`).join("")}</ul>
+ ${cur.line?`<p style="margin-top:14px;font-style:italic;color:var(--mut);font-size:13px">VESPER – ${cur.line}</p>`:""}
+ <div class="act"><a class="btn wa" id="buy" href="#">Purchase on WhatsApp</a><button class="btn pri" id="now">Buy Now</button></div></div>`;
+ show();const tr=$("#tr"),dots=[...document.querySelectorAll("#dots i")];
+ const go=k=>tr.scrollTo({left:k*tr.clientWidth,behavior:"smooth"});
+ tr.onscroll=()=>{const k=Math.round(tr.scrollLeft/tr.clientWidth);dots.forEach((d,j)=>d.classList.toggle("on",j==k))};
+ dots.forEach((d,k)=>d.onclick=()=>go(k));
+ const step=d=>{const k=Math.round(tr.scrollLeft/tr.clientWidth)+d;go((k+im.length)%im.length)};
+ $(".ar.l").onclick=()=>step(-1);$(".ar.r").onclick=()=>step(1);
+ const pick=(id,set)=>{const w=$(id);if(!w)return;w.onclick=e=>{if(e.target.tagName!="BUTTON")return;[...w.children].forEach(b=>b.classList.remove("on"));e.target.classList.add("on");set(e.target.textContent)}};
+ pick("#sz",v=>size=v);pick("#opt",v=>opt=v);
+ const msg=()=>`Hello VESPER! I'd like to order:\n• ${cur.n}${opt?"\n• Colour: "+opt:""}${size?"\n• Size: "+size:""}\nPlease confirm availability, price and delivery. Thank you!`;
+ const need=()=>{if(cur.opt&&!opt){alert("Please select a colour.");return 1}if(cur.sizes.length&&!size){alert("Please select a size.");return 1}};
+ $("#buy").onclick=e=>{e.preventDefault();if(need())return;window.open(wa(msg()),"_blank")};
+ $("#now").onclick=()=>{if(!need())pay(msg())};
+ md.querySelector(".x").onclick=close;
+}
+function pay(m){
+ md.innerHTML=`<button class="x" aria-label="Close">✕</button><div class="pay"><h3>Pay by Bank Transfer</h3><p style="color:var(--mut);font-size:14px">Transfer to the account below, then send us your payment slip on WhatsApp to confirm your order.</p>
+ <div class="bk">${Object.entries(BANK).map(([k,v])=>`<div><span>${k}</span><b>${v}</b></div>`).join("")}</div>
+ <div class="act"><button class="btn ghost" id="cp">Copy account number</button><a class="btn wa" target="_blank" rel="noopener" href="${wa(m+"\n\nI'm paying by bank transfer and will send the slip here.")}">Send order & slip on WhatsApp</a></div></div>`;
+ md.style.display="block";md.querySelector(".x").onclick=close;
+ $("#cp").onclick=e=>{navigator.clipboard&&navigator.clipboard.writeText(BANK["Account No."]);e.target.textContent="Copied ✓"};
+}
+function show(){md.style.display="";ov.classList.add("show");document.body.style.overflow="hidden"}
+function close(){ov.classList.remove("show");document.body.style.overflow=""}
+ov.onclick=e=>{if(e.target==ov)close()};addEventListener("keydown",e=>e.key=="Escape"&&close());
+$("#grid").onclick=e=>{const c=e.target.closest(".pc");if(c)open(+c.dataset.i)};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
